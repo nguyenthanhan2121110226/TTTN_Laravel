@@ -1,0 +1,22 @@
+@tailwind base;
+
+
+.wrapper {
+    padding: 90px 0;
+    
+}
+
+@layer base {
+    .wrapper.light-dark {
+        @apply bg-main-light-bg-color text-main-light-text-color
+    }
+    .wrapper.theme-dark {
+        @apply bg-main-dark-bg-color text-main-dark-text-color
+    }
+}
+
+
+.main-content {
+    max-width: 1500px;
+    margin: 0 auto;
+}

@@ -1,0 +1,37 @@
+@tailwind base;
+.pagination button ~ button {
+    margin-left: 1.6rem;
+}
+
+
+
+@layer base {
+    .sidebar-item {
+        @apply border-[2px] border-main-dark-bg-color border-solid
+    }
+}
+
+
+:global(.sidebar-item-child)  {
+    visibility: hidden;
+    transition: 0.4s;
+    max-height: 0px;
+    overflow: hidden
+}
+
+:global(.sidebar-item-child.show) {
+    visibility: visible;
+    max-height: 300px;
+}
+
+
+.content {
+    font-size: 1.5rem;
+    ul, li {
+        list-style: circle;
+        padding-left: 1.6rem;
+    }
+    a {
+        color: "#FBCB0A"
+    }
+}

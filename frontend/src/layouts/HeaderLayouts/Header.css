@@ -1,0 +1,75 @@
+@tailwind base;
+
+.header {
+    z-index: 99;
+    transition: height 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
+@layer base {
+    .header.theme-dark {
+        @apply text-main-dark-text-color
+    }
+
+    .header.theme-light {
+        @apply text-main-light-text-color;
+    }
+
+    .header-navbar-item {
+        @apply hover:text-black hover:font-[600]
+    }
+
+    .header.theme-dark .header-navbar-item {
+        @apply hover:text-second-dark-text-color hover:font-[600]
+    }
+
+    .header.shrink {
+        @apply h-[60px] bg-second-dark-bg-color text-main-dark-text-color
+    }
+
+    .header.shrink .header-navbar-item {
+        @apply hover:text-second-dark-text-color hover:font-[600]
+    }
+
+
+    .header.shrink .header-user-item .user-btn {
+        @apply hover:text-second-dark-text-color hover:font-[600]
+    }
+
+}
+
+.header.theme-dark .logo img {
+    filter: brightness(100);
+
+}
+
+
+.header.shrink .logo img {
+    filter: brightness(100);
+
+}
+
+
+.main__menu>li~li {
+    margin-left: 42px;
+}
+
+
+.header.theme-light .main__menu--link.is-active {
+    color: #000;
+    font-weight: bold;
+}
+
+.header.theme-dark .main__menu--link.is-active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.header.shrink.theme-light .main__menu--link.is-active {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.header-user-item~.header-user-item {
+    margin-left: 2.4rem;
+}

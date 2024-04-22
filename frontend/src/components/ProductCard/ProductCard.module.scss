@@ -1,0 +1,32 @@
+@tailwind base;
+
+
+@layer base {
+    .card {
+        padding: 1.6rem;
+        width: 100%;
+        position: relative;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        @apply rounded-md
+    }
+
+    .card.dark {
+        @apply bg-[#212121] shadow-main
+    }
+
+    .card .brand span {
+        display: block;
+    }
+
+    .card.dark .brand-logo {
+         filter: brightness(0) invert(1);
+    }
+
+    .sale-badge {
+        @apply bg-second-dark-bg-color text-second-dark-text-color
+    }
+    .card.dark .sale-badge {
+        @apply bg-second-light-bg-color text-main-light-text-color
+    }
+
+}

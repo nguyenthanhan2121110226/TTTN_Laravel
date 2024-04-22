@@ -1,0 +1,73 @@
+.tab-item {
+    padding: 0.3rem 1.6rem;
+    position: relative;
+    opacity: 0.6;
+    white-space: nowrap;
+
+}
+
+.tab-item:hover {
+    opacity: 1;
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-item:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    display: block;
+
+}
+
+.tab-item.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    display: block;
+    opacity: 1;
+}
+
+
+
+
+th,
+td {
+    font-size: 1.5rem !important;
+}
+
+
+@mixin saw-tooth-horizontal($width: 12px, $bg: #fff) {
+    background-image:
+    /* Left jagged */
+    linear-gradient(135deg, $bg 50%, transparent 50%),
+    linear-gradient(45deg, $bg 50%, transparent 50%);
+   
+  background-position:
+    /* Left jagged */
+    top left, top left;
+   
+  background-size: $width $width;
+  background-repeat: repeat-y;
+}
+
+.banner-horizontal {
+    position: relative;
+    background-color: rgb(221, 33, 8);
+    height: 100%;
+    @include saw-tooth-horizontal();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

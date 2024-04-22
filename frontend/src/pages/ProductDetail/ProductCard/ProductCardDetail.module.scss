@@ -1,0 +1,58 @@
+.card {
+    background-image: url(../../../assets/images/bg-detail.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+}
+
+.image-preview {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    animation: move linear 2s infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-20px, -20px) scale(1.3) rotate(25deg);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(1.3) rotate(25deg);
+    }
+
+    100% {
+        transform: translate(-20px, -20px) scale(1.3) rotate(25deg);
+
+    }
+}
+
+.name {
+    font-family: BerlinSansFBDemiBold, sans-serif;
+    font-size: 7rem;
+    line-height: 1;
+}
+
+.color-btn ~ .color-btn {
+    margin-left: 2.4rem;
+}
+
+.btn-size ~ .btn-size {
+    margin-left: 1.6rem;
+}
+
+.btn-size {
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-size.active,
+.btn-size:hover{
+    transform: translateY(-5px);
+    text-decoration: underline;
+    opacity: 1;
+    color: #fff;
+}

@@ -1,0 +1,26 @@
+
+.pagination button ~ button {
+    margin-left: 1.6rem;
+}
+
+.star-form {
+    animation: zoom 1s linear infinite;
+}
+
+.star-form ~ .star-form {
+    margin-left: 1.6rem;
+}
+
+
+@keyframes zoom {
+    0% {
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.2);
+
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}

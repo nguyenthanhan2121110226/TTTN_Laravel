@@ -1,0 +1,21 @@
+@tailwind base;
+
+
+@layer base {
+    .sidebar-item {
+        @apply border-[2px] border-main-dark-bg-color border-solid
+    }
+}
+
+
+:global(.sidebar-item-child)  {
+    visibility: hidden;
+    transition: 0.4s;
+    max-height: 0px;
+    overflow: hidden
+}
+
+:global(.sidebar-item-child.show) {
+    visibility: visible;
+    max-height: 300px;
+}
